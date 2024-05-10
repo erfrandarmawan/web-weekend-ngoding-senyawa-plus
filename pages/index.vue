@@ -54,6 +54,62 @@
       </div>
     </section>
     <!-- ./Video Section -->
+
+    <!-- News Section -->
+    <section class="w-full min-h-screen flex flex-col items-center font-anton text-secondary py-20 px-40">
+      <div class="flex flex-col">
+        <h1 class="text-7xl -ml-20">LATEST</h1>
+        <div class="flex -mr-20">
+          <h1 class="text-7xl">NEWS</h1>
+          <span class="text-7xl -mt-8">+</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 mt-20 gap-10">
+        <div class="card w-full h-96 bg-base-100 shadow-xl">
+          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+          <div class="card-body text-primary">
+            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
+          </div>
+        </div>
+
+        <div class="card w-full h-96 bg-base-100 shadow-xl">
+          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+          <div class="card-body text-primary">
+            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
+          </div>
+        </div>
+
+        <div class="card w-full h-96 bg-base-100 shadow-xl">
+          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+          <div class="card-body text-primary">
+            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
+          </div>
+        </div>
+
+        <div class="card w-full h-96 bg-base-100 shadow-xl">
+          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+          <div class="card-body text-primary">
+            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
+          </div>
+        </div>
+
+        <div class="card w-full h-96 bg-base-100 shadow-xl">
+          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+          <div class="card-body text-primary">
+            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
+          </div>
+        </div>
+
+        <div class="card w-full h-96 bg-base-100 shadow-xl">
+          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+          <div class="card-body text-primary">
+            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./News Section -->
   </main>
 </template>
 
