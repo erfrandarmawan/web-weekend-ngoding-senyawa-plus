@@ -39,6 +39,21 @@
       </div>
     </section>
     <!-- ./About Section -->
+
+    <!-- Video Section -->
+    <section class="w-full h-screen flex flex-col items-center justify-center">
+      <div class="mockup-phone">
+        <div class="camera"></div> 
+        <div class="display">
+          <div class="artboard artboard-demo phone-1">
+            <video controls>
+              <source src="https://sgp1.vultrobjects.com/public-develobe/videos/senyawa_intro_video.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./Video Section -->
   </main>
 </template>
 
