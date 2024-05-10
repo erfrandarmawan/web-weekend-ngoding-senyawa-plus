@@ -1,10 +1,27 @@
 <template>
-  <main class="w-full h-auto flex flex-row bg-primary">
+  <main class="w-full h-auto flex flex-col bg-primary">
     <!-- Landing Page Section -->
-    <section class="w-full min-h-screen flex items-center justify-center">
-      <img src="/images/logo.webp" class="w-60"/>
+    <section class="w-full h-screen flex items-center justify-center">
+      <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-60"/>
     </section>
     <!-- ./Landing Page Section -->
+
+    <!-- Tagline Section -->
+    <section class="w-full h-screen flex relative z-10 items-center justify-center text-white p-20 
+      bg-[url('https://ik.imagekit.io/b3amk7ihm/senyawa_bg_tagline.webp')] bg-cover bg-no-repeat bg-center
+      before:content-['']
+      before:absolute
+      before:inset-0
+      before:block
+      before:bg-primary
+      before:opacity-80
+      before:z-[-5]">
+      <h1 class="font-cinzel text-white text-center font-light text-7xl leading-snug">
+        EXPLORE INDONESIAN<br>
+        EMERGING <span class="font-anton text-secondary">CREATORS <span class="text-white">+</span> BRANDS</span>
+      </h1>
+    </section>
+    <!-- ./Tagline Section -->
   </main>
 </template>
 

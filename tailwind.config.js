@@ -9,7 +9,13 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cinzel: ['Cinzel'],
+        anton: ['Anton'],
+        poppins: ['Poppins']
+      }
+    },
   },
   plugins: [
     require('daisyui')
