@@ -22,6 +22,23 @@
       </h1>
     </section>
     <!-- ./Tagline Section -->
+
+    <!-- About Section -->
+    <section class="w-full h-screen flex items-center justify-center">
+      <div class="w-1/3 h-[600px] overflow-hidden rounded-2xl ">
+        <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_bg_tagline.webp" class="w-full h-full object-cover" />
+      </div>
+      <div class="w-1/2 flex flex-col text-white ml-16">
+        <h2 class="font-cinzel text-4xl tracking-[0.4em] leading-normal">
+          SENYAWA+ ART SPACE PROVIDES A SUPPORT SYSTEM FOR LOCAL CREATORS AND BRANDS TO EXHIBIT THEIR PRODUCTS
+        </h2>
+        <a href="https://maps.app.goo.gl/32Fnp7iyDUTnyibp9"
+          id="link-senyawa-space"
+          class="btn btn-secondary btn-lg rounded-full w-fit font-anton uppercase mt-5 tracking-widest" 
+          target="_blank" rel="noreferrer noopener">Discover Our Space</a>
+      </div>
+    </section>
+    <!-- ./About Section -->
   </main>
 </template>
 
