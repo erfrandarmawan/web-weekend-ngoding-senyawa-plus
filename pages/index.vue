@@ -50,7 +50,7 @@
 
     <!-- Video Section -->
     <section class="w-full h-screen flex flex-col items-center justify-center">
-      <div class="mockup-phone">
+      <div id="video-intro" class="mockup-phone">
         <div class="camera"></div> 
         <div class="display">
           <div class="artboard artboard-demo phone-1">
@@ -218,6 +218,13 @@
           y: 100,
           duration: 1,
           opacity: 0,
+        });
+
+      gsap.timeline()
+        .from("#video-intro", {
+          duration: 1.5,
+          opacity: 0,
+          scale: 0
         });
     });
   }
