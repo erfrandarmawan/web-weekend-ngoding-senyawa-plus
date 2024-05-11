@@ -147,12 +147,12 @@
 <script setup>
   // Heading and set body attributes
   useHead({
-    title: 'Senyawa+',
+    title: 'Senyawa Plus',
     viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
     charset: 'utf-8',
     meta: [
       { name: 'description', content: "TODO" },
-      { name: 'og:title', content: 'Senyawa+' },
+      { name: 'og:title', content: 'Senyawa Plus' },
       { name: 'og:url', content: 'https://senyawa.develobe.id/' },
       { name: 'og:description', content: "TODO" },
       { name: 'og:image', content: 'TODO' },
