@@ -66,14 +66,14 @@
     <!-- News Section -->
     <section class="w-full min-h-screen flex flex-col items-center font-anton text-secondary py-20 px-40">
       <div class="flex flex-col">
-        <h1 class="text-7xl -ml-20">LATEST</h1>
+        <h1 id="text-latest" class="text-7xl -ml-20">TSETAL</h1>
         <div class="flex -mr-20">
-          <h1 class="text-7xl">NEWS</h1>
+          <h1 id="text-news" class="text-7xl">SWEN</h1>
           <span class="text-7xl -mt-8">+</span>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 mt-20 gap-10">
+      <div id="wrapper-social-media" class="grid grid-cols-3 mt-20 gap-10">
         <div class="card w-full h-96 bg-base-100 shadow-xl">
           <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
           <div class="card-body text-primary">
@@ -226,6 +226,24 @@
           opacity: 0,
           scale: 0
         });
+
+      gsap.timeline()
+        .to("#text-latest", {
+          duration: 1.5,
+          ease: "none",
+          text: "LATEST"
+        })
+        .to("#text-news", {
+          duration: 1.5,
+          ease: "none",
+          text: "NEWS"
+        })
+        .from("#wrapper-social-media", {
+          duration: 1.5,
+          y: 100,
+          opacity: 0
+        });
+        
     });
   }
 
