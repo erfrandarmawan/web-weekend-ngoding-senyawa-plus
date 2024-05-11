@@ -74,47 +74,18 @@
       </div>
 
       <div id="wrapper-social-media" class="grid grid-cols-3 mt-20 gap-10">
-        <div class="card w-full h-96 bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body text-primary">
-            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
+        <a v-for="item in config.public.newsData"
+          :key="item.code"
+          :href="`https://instagram.com/p/${item.code}`"
+          class="group">
+          <div
+            class="card w-full h-[600px] bg-base-100 shadow-xl overflow-hidden">
+            <figure><img :src="item.thumbnail" :alt="item.caption" class="group-hover:scale-110 duration-300" /></figure>
+            <div class="card-body text-primary font-poppins">
+              <p class="line-clamp-5">{{ item.caption }}</p>
+            </div>
           </div>
-        </div>
-
-        <div class="card w-full h-96 bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body text-primary">
-            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-
-        <div class="card w-full h-96 bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body text-primary">
-            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-
-        <div class="card w-full h-96 bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body text-primary">
-            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-
-        <div class="card w-full h-96 bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body text-primary">
-            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-
-        <div class="card w-full h-96 bg-base-100 shadow-xl">
-          <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body text-primary">
-            <p class="line-clamp-5">If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
+        </a>
       </div>
     </section>
     <!-- ./News Section -->
@@ -290,6 +261,9 @@
   // Prepare variable
   let ctx;
   const isMounted = ref(false);
+  
+  // Get runtime config
+  const config = useRuntimeConfig();
 
   // Register GSAP plugin
   gsap.registerPlugin(TextPlugin);

@@ -11,4 +11,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['gsap'],
   },
+  runtimeConfig: {
+    public: {
+      newsData: '',
+    },
+  }
 })
