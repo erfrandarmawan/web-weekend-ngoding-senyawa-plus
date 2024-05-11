@@ -1,8 +1,16 @@
 <template>
   <main class="w-full h-auto flex flex-col bg-primary">
     <!-- Landing Page Section -->
-    <section class="w-full h-screen flex items-center justify-center">
+    <section id="section-landing-page" class="w-full h-screen flex items-center justify-center">
       <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-60"/>
+
+      <div id="scrolling-icon" class="absolute bottom-0 mb-5 animate-bounce"
+        :class="isMounted ? 'opacity-100' : 'opacity-0'">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30.2667 14.3167L20.8333 23.75L11.4 14.3167L12.5833 13.15L20.8333 21.4L29.0833 13.15L30.2667 14.3167Z" fill="#E56CCA"/>
+        </svg>
+      </div>
+
     </section>
     <!-- ./Landing Page Section -->
 
@@ -145,6 +153,9 @@
 </template>
 
 <script setup>
+  // Import library
+  import gsap from 'gsap';
+
   // Heading and set body attributes
   useHead({
     title: 'Senyawa Plus',
@@ -158,4 +169,39 @@
       { name: 'og:image', content: 'TODO' },
     ],
   })
+
+  function animatePage(){
+    // Animate page
+    ctx = gsap.context((self) => {
+      gsap.timeline()
+        .from("#section-landing-page", {
+          y: 50,
+          duration: 0.5,
+          opacity: 0,
+        })
+        .from("#scrolling-icon", {
+          duration: 0.5,
+          opacity: 0,
+        });
+    });
+  }
+
+  // Prepare variable
+  let ctx;
+  const isMounted = ref(false);
+
+  onMounted(() => {
+    // Set flag mounted
+    isMounted.value = true;
+    
+    // Animate page
+    animatePage();
+  });
+
+  onUnmounted(() => {
+    // Revert to original state
+    if (ctx){
+      ctx.revert();
+    }
+  });
 </script>
