@@ -121,30 +121,34 @@
 
     <!-- Contact Section -->
     <section class="w-full h-screen flex flex-col items-center justify-center relative">
-      <div class="flex items-center gap-10">
-        <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-60 h-fit"/>
-        <div class="w-0.5 h-24 bg-secondary"></div>
-        <div class="flex flex-col text-white text-poppins">
+      <div class="w-full flex items-center gap-10">
+        <div class="w-1/2 flex justify-end">
+          <img id="img-contact" src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-60 min-w-60 h-fit"/>
+        </div>
+
+        <div id="divider-contact" class="w-0.5 h-24 bg-secondary"></div>
+
+        <div class="flex flex-col text-white text-poppins w-1/2">
           <div class="flex items-center gap-2">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="icon-email" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.232 38C8.31067 38 7.542 37.692 6.926 37.076C6.31 36.46 6.00133 35.6907 6 34.768V13.232C6 12.3107 6.30867 11.542 6.926 10.926C7.54333 10.31 8.31133 10.0013 9.23 10H38.77C39.69 10 40.458 10.3087 41.074 10.926C41.69 11.5433 41.9987 12.312 42 13.232V34.77C42 35.69 41.6913 36.4587 41.074 37.076C40.4567 37.6933 39.6887 38.0013 38.77 38H9.232ZM24 24.232L8 13.77V34.77C8 35.1287 8.11533 35.4233 8.346 35.654C8.57667 35.8847 8.872 36 9.232 36H38.77C39.1287 36 39.4233 35.8847 39.654 35.654C39.8847 35.4233 40 35.128 40 34.768V13.768L24 24.232ZM24 22L39.384 12H8.616L24 22ZM8 13.77V12V34.77C8 35.1287 8.11533 35.4233 8.346 35.654C8.57667 35.8847 8.872 36 9.232 36H8V13.77Z" fill="white"/>
             </svg>
-            <span class="text-xl">hello@senyawa.plus</span>
+            <span id="text-email-senyawa" class="text-xl" aria-label="hello@senyawa.plus"></span>
           </div>
 
           <div class="flex items-center gap-2">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="icon-instagram" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 32C26.1217 32 28.1566 31.1571 29.6569 29.6569C31.1571 28.1566 32 26.1217 32 24C32 21.8783 31.1571 19.8434 29.6569 18.3431C28.1566 16.8429 26.1217 16 24 16C21.8783 16 19.8434 16.8429 18.3431 18.3431C16.8429 19.8434 16 21.8783 16 24C16 26.1217 16.8429 28.1566 18.3431 29.6569C19.8434 31.1571 21.8783 32 24 32Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M6 32V16C6 13.3478 7.05357 10.8043 8.92893 8.92893C10.8043 7.05357 13.3478 6 16 6H32C34.6522 6 37.1957 7.05357 39.0711 8.92893C40.9464 10.8043 42 13.3478 42 16V32C42 34.6522 40.9464 37.1957 39.0711 39.0711C37.1957 40.9464 34.6522 42 32 42H16C13.3478 42 10.8043 40.9464 8.92893 39.0711C7.05357 37.1957 6 34.6522 6 32Z" stroke="white" stroke-width="1.5"/>
               <path d="M35 13.02L35.02 12.998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
 
-            <a href="https://www.instagram.com/senyawa.plus/" class="text-xl link link-hover" target="_blank" rel="noreferrer noopener">@senyawa.plus</a>
+            <a id="link-instagram-senyawa" href="https://www.instagram.com/senyawa.plus/" class="text-xl link link-hover" target="_blank" rel="noreferrer noopener" aria-label="@senyawa.plus"></a>
           </div>
         </div>
       </div>
 
-      <div class="text-white absolute bottom-0 mb-10 font-poppins text-lg">
+      <div id="developer-info" class="text-white absolute bottom-0 mb-10 font-poppins text-lg">
         Made by <a href="https://www.instagram.com/erfrandarmawan" class="link link-hover text-secondary font-bold">Erfran Darmawan</a> from <a href="https://develobe.id/" class="link link-hover text-secondary font-bold">DEVELOBE.ID</a>
       </div>
     </section>
@@ -243,7 +247,43 @@
           y: 100,
           opacity: 0
         });
-        
+
+      gsap.timeline()
+        .from("#divider-contact", {
+          duration: 0.5,
+          y: 40,
+          opacity: 0
+        })
+        .from("#img-contact", {
+          duration: 0.5,
+          x: 60,
+          opacity: 0
+        })
+        .from("#icon-email", {
+          duration: 0.5,
+          x: -60,
+          opacity: 0
+        }, "<")
+        .from("#icon-instagram", {
+          duration: 0.5,
+          x: -60,
+          opacity: 0
+        }, "<")
+        .to("#text-email-senyawa", {
+          duration: 1.5,
+          ease: "none",
+          text: "hello@senyawa.plus"
+        })
+        .to("#link-instagram-senyawa", {
+          duration: 1.5,
+          ease: "none",
+          text: "@senyawa.plus"
+        }, "<")
+        .from("#developer-info", {
+          duration: 0.5,
+          y: 50,
+          opacity: 0
+        })
     });
   }
 
