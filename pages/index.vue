@@ -16,7 +16,7 @@
 
     <!-- Tagline Section -->
     <section class="w-full h-screen flex relative z-10 items-center justify-center text-white p-20 
-      bg-[url('https://ik.imagekit.io/b3amk7ihm/senyawa_bg_tagline.webp')] bg-cover bg-no-repeat bg-center
+      bg-[url('https://ik.imagekit.io/b3amk7ihm/senyawa_bg_tagline.webp')] bg-cover bg-no-repeat bg-center bg-fixed
       before:content-['']
       before:absolute
       before:inset-0
@@ -25,8 +25,8 @@
       before:opacity-80
       before:z-[-5]">
       <h1 class="font-cinzel text-white text-center font-light text-7xl leading-snug">
-        EXPLORE INDONESIAN<br>
-        EMERGING <span class="font-anton text-secondary">CREATORS <span class="text-white">+</span> BRANDS</span>
+        <span id="text-explore-indonesian">XXXXXXX XXXXXXXXXX</span><br>
+        <span id="text-emerging">XXXXXXXX</span> <span class="font-anton text-secondary" id="text-creators"></span> <span class="text-white" id="text-plus">+</span> <span class="font-anton text-secondary" id="text-brands"></span>
       </h1>
     </section>
     <!-- ./Tagline Section -->
@@ -155,6 +155,7 @@
 <script setup>
   // Import library
   import gsap from 'gsap';
+  import { TextPlugin } from 'gsap/TextPlugin';
 
   // Heading and set body attributes
   useHead({
@@ -183,12 +184,33 @@
           duration: 0.5,
           opacity: 0,
         });
+
+      gsap.timeline()
+        .to("#text-explore-indonesian", {
+          duration: 2,
+          text: "EXPLORE INDONESIAN"
+        })
+        .to("#text-emerging", {
+          duration: 1,
+          text: "EMERGING"
+        })
+        .to("#text-creators", {
+          duration: 1,
+          text: "CREATORS"
+        })
+        .to("#text-brands", {
+          duration: 1,
+          text: "BRANDS"
+        })
     });
   }
 
   // Prepare variable
   let ctx;
   const isMounted = ref(false);
+
+  // Register GSAP plugin
+  gsap.registerPlugin(TextPlugin);
 
   onMounted(() => {
     // Set flag mounted
