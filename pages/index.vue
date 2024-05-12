@@ -2,7 +2,8 @@
   <main class="w-full h-auto flex flex-col bg-primary">
     <!-- Landing Page Section -->
     <section id="section-landing-page" class="w-full h-screen flex items-center justify-center">
-      <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-40 md:w-60 xl:w-60"/>
+      <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-40 md:w-60 xl:w-60"
+        :class="isMounted ? 'opacity-100' : 'opacity-0'"/>
 
       <div id="scrolling-icon" class="absolute bottom-0 mb-5 animate-bounce"
         :class="isMounted ? 'opacity-100' : 'opacity-0'">
