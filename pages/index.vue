@@ -2,11 +2,11 @@
   <main class="w-full h-auto flex flex-col bg-primary">
     <!-- Landing Page Section -->
     <section id="section-landing-page" class="w-full h-screen flex items-center justify-center">
-      <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-60"/>
+      <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-40 xl:w-60"/>
 
       <div id="scrolling-icon" class="absolute bottom-0 mb-5 animate-bounce"
         :class="isMounted ? 'opacity-100' : 'opacity-0'">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 xl:w-10 xl:h-10">
           <path d="M30.2667 14.3167L20.8333 23.75L11.4 14.3167L12.5833 13.15L20.8333 21.4L29.0833 13.15L30.2667 14.3167Z" fill="#E56CCA"/>
         </svg>
       </div>
@@ -15,7 +15,7 @@
     <!-- ./Landing Page Section -->
 
     <!-- Tagline Section -->
-    <section id="section-tagline" class="w-full h-screen flex relative z-10 items-center justify-center text-white p-20 
+    <section id="section-tagline" class="w-full h-screen flex relative z-10 items-center justify-center text-white p-5 xl:p-20 
       bg-[url('https://ik.imagekit.io/b3amk7ihm/senyawa_bg_tagline.webp')] bg-cover bg-no-repeat bg-center bg-fixed
       before:content-['']
       before:absolute
@@ -24,7 +24,7 @@
       before:bg-primary
       before:opacity-80
       before:z-[-5]">
-      <h1 class="font-cinzel text-white text-center font-light text-7xl leading-snug">
+      <h1 class="font-cinzel text-white text-center font-light text-3xl xl:text-7xl leading-snug">
         <span id="text-explore-indonesian">XXXXXXX XXXXXXXXXX</span><br>
         <span id="text-emerging">XXXXXXXX</span> <span class="font-anton text-secondary" id="text-creators"></span> <span class="text-white" id="text-plus">+</span> <span class="font-anton text-secondary" id="text-brands"></span>
       </h1>
@@ -32,16 +32,16 @@
     <!-- ./Tagline Section -->
 
     <!-- About Section -->
-    <section id="section-about" class="w-full h-screen flex items-center justify-center">
-      <div id="img-about" class="w-1/3 h-[600px] overflow-hidden rounded-2xl ">
+    <section id="section-about" class="w-full min-h-screen flex flex-col xl:flex-row items-center justify-center p-5 xl:p-0">
+      <div id="img-about" class="w-full xl:w-1/3 h-96 xl:h-[600px] overflow-hidden rounded-2xl ">
         <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_bg_tagline.webp" class="w-full h-full object-cover" />
       </div>
-      <div class="w-1/2 flex flex-col text-white ml-16">
-        <h2 id="text-about" class="font-cinzel text-4xl tracking-[0.4em] leading-normal">
+      <div class="w-full xl:w-1/2 flex flex-col text-white items-center xl:items-start ml-0 xl:ml-16 mt-5 xl:mt-0">
+        <h2 id="text-about" class="font-cinzel text-xl xl:text-4xl tracking-[0.4em] leading-normal w-full">
         </h2>
         <div id="link-wrapper-senyawa-space">
           <a id="link-senyawa-space" href="https://maps.app.goo.gl/32Fnp7iyDUTnyibp9"
-            class="btn btn-secondary btn-lg rounded-full w-fit font-anton uppercase mt-5 tracking-widest" 
+            class="btn btn-secondary btn-md xl:btn-lg rounded-full w-fit font-anton uppercase mt-5 tracking-widest" 
             target="_blank" rel="noreferrer noopener">Discover Our Space</a>
         </div>
       </div>
@@ -49,11 +49,11 @@
     <!-- ./About Section -->
 
     <!-- Video Section -->
-    <section id="section-video" class="w-full h-screen flex flex-col items-center justify-center">
+    <section id="section-video" class="w-full h-screen flex flex-col items-center justify-center p-10 xl:p-0">
       <div id="video-intro" class="mockup-phone">
         <div class="camera"></div> 
         <div class="display">
-          <div class="artboard artboard-demo phone-1">
+          <div class="artboard artboard-demo xl:phone-1">
             <video controls>
               <source src="https://sgp1.vultrobjects.com/public-develobe/videos/senyawa_intro_video.mp4" type="video/mp4">
             </video>
@@ -64,16 +64,16 @@
     <!-- ./Video Section -->
 
     <!-- News Section -->
-    <section id="section-news" class="w-full min-h-screen flex flex-col items-center font-anton text-secondary py-20 px-40">
+    <section id="section-news" class="w-full min-h-screen flex flex-col items-center font-anton text-secondary py-10 xl:py-20 px-5 xl:px-40">
       <div class="flex flex-col">
-        <h1 id="text-latest" class="text-7xl -ml-20">TSETAL</h1>
-        <div class="flex -mr-20">
-          <h1 id="text-news" class="text-7xl">SWEN</h1>
-          <span id="text-news-plus" class="text-7xl -mt-8">+</span>
+        <h1 id="text-latest" class="text-3xl xl:text-7xl -ml-10 xl:-ml-20">TSETAL</h1>
+        <div class="flex -mr-10 xl:-mr-20">
+          <h1 id="text-news" class="text-3xl xl:text-7xl">SWEN</h1>
+          <span id="text-news-plus" class="text-3xl xl:text-7xl -mt-4 xl:-mt-8">+</span>
         </div>
       </div>
 
-      <div id="wrapper-social-media" class="grid grid-cols-3 mt-20 gap-10">
+      <div id="wrapper-social-media" class="grid grid-cols-1 xl:grid-cols-3 mt-10 xl:mt-20 gap-5 xl:gap-10">
         <a v-for="item in config.public.newsData"
           :key="item.code"
           :href="`https://instagram.com/p/${item.code}`"
@@ -81,10 +81,10 @@
           rel="noreferrer noopener"
           class="group">
           <div
-            class="card w-full h-[600px] bg-base-100 shadow-xl overflow-hidden">
+            class="card w-full h-96 xl:h-[600px] bg-base-100 shadow-xl overflow-hidden">
             <figure><img :src="item.thumbnail" :alt="item.caption" class="group-hover:scale-110 duration-300" /></figure>
-            <div class="card-body text-primary font-poppins">
-              <p class="line-clamp-5">{{ item.caption }}</p>
+            <div class="card-body text-primary font-poppins p-4 xl:p-8">
+              <p class="line-clamp-5 text-xs xl:text-base">{{ item.caption }}</p>
             </div>
           </div>
         </a>
@@ -94,34 +94,34 @@
 
     <!-- Contact Section -->
     <section id="section-contact" class="w-full h-screen flex flex-col items-center justify-center relative">
-      <div class="w-full flex items-center gap-10">
-        <div class="w-1/2 flex justify-end">
-          <img id="img-contact" src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-60 min-w-60 h-fit"/>
+      <div class="w-full flex items-center gap-2 xl:gap-10">
+        <div class="w-5/12 xl:w-1/2 flex justify-end">
+          <img id="img-contact" src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-24 min-w-24 xl:w-60 xl:min-w-60 h-fit"/>
         </div>
 
-        <div id="divider-contact" class="w-0.5 h-24 bg-secondary"></div>
+        <div id="divider-contact" class="w-0.5 h-16 xl:h-24 bg-secondary"></div>
 
-        <div class="flex flex-col text-white text-poppins w-1/2">
-          <div class="flex items-center gap-2">
-            <svg id="icon-email" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="flex flex-col text-white text-poppins w-7/12 xl:w-1/2">
+          <div class="flex items-center gap-1 xl:gap-2">
+            <svg id="icon-email" class="w-6 h-6 xl:w-12 xl:h-12" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.232 38C8.31067 38 7.542 37.692 6.926 37.076C6.31 36.46 6.00133 35.6907 6 34.768V13.232C6 12.3107 6.30867 11.542 6.926 10.926C7.54333 10.31 8.31133 10.0013 9.23 10H38.77C39.69 10 40.458 10.3087 41.074 10.926C41.69 11.5433 41.9987 12.312 42 13.232V34.77C42 35.69 41.6913 36.4587 41.074 37.076C40.4567 37.6933 39.6887 38.0013 38.77 38H9.232ZM24 24.232L8 13.77V34.77C8 35.1287 8.11533 35.4233 8.346 35.654C8.57667 35.8847 8.872 36 9.232 36H38.77C39.1287 36 39.4233 35.8847 39.654 35.654C39.8847 35.4233 40 35.128 40 34.768V13.768L24 24.232ZM24 22L39.384 12H8.616L24 22ZM8 13.77V12V34.77C8 35.1287 8.11533 35.4233 8.346 35.654C8.57667 35.8847 8.872 36 9.232 36H8V13.77Z" fill="white"/>
             </svg>
-            <span id="text-email-senyawa" class="text-xl" aria-label="hello@senyawa.plus"></span>
+            <span id="text-email-senyawa" class="text-xs xl:text-xl" aria-label="hello@senyawa.plus"></span>
           </div>
 
-          <div class="flex items-center gap-2">
-            <svg id="icon-instagram" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="flex items-center gap-1 xl:gap-2">
+            <svg id="icon-instagram" class="w-6 h-6 xl:w-12 xl:h-12" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 32C26.1217 32 28.1566 31.1571 29.6569 29.6569C31.1571 28.1566 32 26.1217 32 24C32 21.8783 31.1571 19.8434 29.6569 18.3431C28.1566 16.8429 26.1217 16 24 16C21.8783 16 19.8434 16.8429 18.3431 18.3431C16.8429 19.8434 16 21.8783 16 24C16 26.1217 16.8429 28.1566 18.3431 29.6569C19.8434 31.1571 21.8783 32 24 32Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M6 32V16C6 13.3478 7.05357 10.8043 8.92893 8.92893C10.8043 7.05357 13.3478 6 16 6H32C34.6522 6 37.1957 7.05357 39.0711 8.92893C40.9464 10.8043 42 13.3478 42 16V32C42 34.6522 40.9464 37.1957 39.0711 39.0711C37.1957 40.9464 34.6522 42 32 42H16C13.3478 42 10.8043 40.9464 8.92893 39.0711C7.05357 37.1957 6 34.6522 6 32Z" stroke="white" stroke-width="1.5"/>
               <path d="M35 13.02L35.02 12.998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
 
-            <a id="link-instagram-senyawa" href="https://www.instagram.com/senyawa.plus/" class="text-xl link link-hover" target="_blank" rel="noreferrer noopener" aria-label="@senyawa.plus"></a>
+            <a id="link-instagram-senyawa" href="https://www.instagram.com/senyawa.plus/" class="text-xs xl:text-xl link link-hover" target="_blank" rel="noreferrer noopener" aria-label="@senyawa.plus"></a>
           </div>
         </div>
       </div>
 
-      <div id="developer-info" class="text-white absolute bottom-0 mb-10 font-poppins text-lg">
+      <div id="developer-info" class="text-white absolute bottom-0 mb-5 xl:mb-10 font-poppins text-xs xl:text-lg text-center">
         Made by <a href="https://www.instagram.com/erfrandarmawan" class="link link-hover text-secondary font-bold">Erfran Darmawan</a> from <a href="https://develobe.id/" class="link link-hover text-secondary font-bold">DEVELOBE.ID</a>
       </div>
     </section>
