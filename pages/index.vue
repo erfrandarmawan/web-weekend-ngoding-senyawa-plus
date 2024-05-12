@@ -15,7 +15,7 @@
     <!-- ./Landing Page Section -->
 
     <!-- Tagline Section -->
-    <section class="w-full h-screen flex relative z-10 items-center justify-center text-white p-20 
+    <section id="section-tagline" class="w-full h-screen flex relative z-10 items-center justify-center text-white p-20 
       bg-[url('https://ik.imagekit.io/b3amk7ihm/senyawa_bg_tagline.webp')] bg-cover bg-no-repeat bg-center bg-fixed
       before:content-['']
       before:absolute
@@ -32,7 +32,7 @@
     <!-- ./Tagline Section -->
 
     <!-- About Section -->
-    <section class="w-full h-screen flex items-center justify-center">
+    <section id="section-about" class="w-full h-screen flex items-center justify-center">
       <div id="img-about" class="w-1/3 h-[600px] overflow-hidden rounded-2xl ">
         <img src="https://ik.imagekit.io/b3amk7ihm/senyawa_bg_tagline.webp" class="w-full h-full object-cover" />
       </div>
@@ -49,7 +49,7 @@
     <!-- ./About Section -->
 
     <!-- Video Section -->
-    <section class="w-full h-screen flex flex-col items-center justify-center">
+    <section id="section-video" class="w-full h-screen flex flex-col items-center justify-center">
       <div id="video-intro" class="mockup-phone">
         <div class="camera"></div> 
         <div class="display">
@@ -64,12 +64,12 @@
     <!-- ./Video Section -->
 
     <!-- News Section -->
-    <section class="w-full min-h-screen flex flex-col items-center font-anton text-secondary py-20 px-40">
+    <section id="section-news" class="w-full min-h-screen flex flex-col items-center font-anton text-secondary py-20 px-40">
       <div class="flex flex-col">
         <h1 id="text-latest" class="text-7xl -ml-20">TSETAL</h1>
         <div class="flex -mr-20">
           <h1 id="text-news" class="text-7xl">SWEN</h1>
-          <span class="text-7xl -mt-8">+</span>
+          <span id="text-news-plus" class="text-7xl -mt-8">+</span>
         </div>
       </div>
 
@@ -91,7 +91,7 @@
     <!-- ./News Section -->
 
     <!-- Contact Section -->
-    <section class="w-full h-screen flex flex-col items-center justify-center relative">
+    <section id="section-contact" class="w-full h-screen flex flex-col items-center justify-center relative">
       <div class="w-full flex items-center gap-10">
         <div class="w-1/2 flex justify-end">
           <img id="img-contact" src="https://ik.imagekit.io/b3amk7ihm/senyawa_logo.webp" class="w-60 min-w-60 h-fit"/>
@@ -131,6 +131,7 @@
   // Import library
   import gsap from 'gsap';
   import { TextPlugin } from 'gsap/TextPlugin';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
   // Heading and set body attributes
   useHead({
@@ -160,7 +161,12 @@
           opacity: 0,
         });
 
-      gsap.timeline()
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#section-tagline",
+            start: 'top top',
+          }
+        })
         .to("#text-explore-indonesian", {
           duration: 2,
           text: "EXPLORE INDONESIAN"
@@ -178,7 +184,12 @@
           text: "BRANDS"
         })
 
-      gsap.timeline()
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#section-about",
+            start: 'top top',
+          }
+        })
         .from("#img-about", {
           y: 100,
           duration: 1,
@@ -195,14 +206,32 @@
           opacity: 0,
         });
 
-      gsap.timeline()
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#section-video",
+            start: 'top top',
+          }
+        })
         .from("#video-intro", {
           duration: 1.5,
           opacity: 0,
           scale: 0
         });
 
-      gsap.timeline()
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#section-news",
+            start: 'top top',
+          }
+        })
+        .from("#text-latest", {
+          opacity: 0,
+          duration: 0.5,
+        })
+        .from("#text-news", {
+          opacity: 0,
+          duration: 0.5,
+        })
         .to("#text-latest", {
           duration: 1.5,
           ease: "none",
@@ -213,13 +242,22 @@
           ease: "none",
           text: "NEWS"
         })
+        .from("#text-news-plus", {
+          opacity: 0,
+          duration: 1,
+        })
         .from("#wrapper-social-media", {
           duration: 1.5,
           y: 100,
           opacity: 0
         });
 
-      gsap.timeline()
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#section-contact",
+            start: 'top top',
+          }
+        })
         .from("#divider-contact", {
           duration: 0.5,
           y: 40,
@@ -267,6 +305,7 @@
 
   // Register GSAP plugin
   gsap.registerPlugin(TextPlugin);
+  gsap.registerPlugin(ScrollTrigger);
 
   onMounted(() => {
     // Set flag mounted
