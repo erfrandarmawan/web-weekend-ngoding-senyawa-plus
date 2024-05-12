@@ -1,75 +1,38 @@
-# Nuxt 3 Minimal Starter
+## Supports
+Love this repository? You can support me via Karya Karsa (https://karyakarsa.com/develobe)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Links
+- Final Results : https://senyawa.develobe.id/
+- Instagram : https://www.instagram.com/erfrandarmawan/
+- Tiktok : https://www.tiktok.com/@erfrandarmawan
+- Twitter : https://twitter.com/erfrandarmawan
+- Discord : https://discord.gg/mCqP3WBXgB
 
-## Setup
+## Requirements
+- Node version 22
 
-Make sure to install the dependencies:
+## Setup Project
+- Install node packages
+run command `npm install --verbose`
+<br>
 
-```bash
-# npm
-npm install
+- Copy file `.env.example` into `.env`
+<br>
 
-# pnpm
-pnpm install
+## Run Project
+- run command `npm run dev`
+<br>
 
-# yarn
-yarn install
+## Build Project
+- run command `npm run build --verbose` or `npx nuxi build`
 
-# bun
-bun install
-```
+## Deploy Project
+Several options to deploy this website :
 
-## Development Server
+- [![Vultr Referral Badge](https://www.vultr.com/media/logo_onwhite.png)](https://www.vultr.com/?ref=9260837)
+<br>
 
-Start the development server on `http://localhost:3000`:
+- [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=199d1d7b5b0d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+<br>
+Made by <a href="https://instagram.com/erfrandarmawan/" target="_blank">Erfran Darmawan</a> at <a href="https://develobe.id" target="_blank">DEVELOBE.ID</a> - 2024
