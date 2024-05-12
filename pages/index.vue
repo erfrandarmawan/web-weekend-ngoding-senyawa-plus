@@ -141,11 +141,26 @@
     viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
     charset: 'utf-8',
     meta: [
-      { name: 'description', content: "TODO" },
+      { name: 'description', content: 'SENYAWA+ ART SPACE PROVIDES A SUPPORT SYSTEM FOR LOCAL CREATORS AND BRANDS TO EXHIBIT THEIR PRODUCTS' },
+      { name: 'keywords', content: 'senyawa, senyawa plus, art, art space, creators, brands, product, space, local creators, local brands, exhibition' },
+      { name: 'author', content: 'Erfran Darmawan' },
+
       { name: 'og:title', content: 'Senyawa Plus' },
+      { name: 'og:site_name', content: 'Senyawa Plus' },
+      { name: 'og:description', content: 'SENYAWA+ ART SPACE PROVIDES A SUPPORT SYSTEM FOR LOCAL CREATORS AND BRANDS TO EXHIBIT THEIR PRODUCTS' },
       { name: 'og:url', content: 'https://senyawa.develobe.id/' },
-      { name: 'og:description', content: "TODO" },
-      { name: 'og:image', content: 'TODO' },
+      { name: 'og:image', content: 'https://ik.imagekit.io/b3amk7ihm/tr:w-300/senyawa_landing_page.png' },
+      { name: 'og:image:secure_url', content: 'https://ik.imagekit.io/b3amk7ihm/tr:w-300/senyawa_landing_page.png' },
+      { name: 'og:image:type', content: 'image/png' },
+      { name: 'og:image:width', content: '300' },
+      { name: 'og:image:height', content: '213' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:locale', content: 'en_US' },
+
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Senyawa Plus' },
+      { name: 'twitter:description', content: 'SENYAWA+ ART SPACE PROVIDES A SUPPORT SYSTEM FOR LOCAL CREATORS AND BRANDS TO EXHIBIT THEIR PRODUCTS' },
+      { name: 'twitter:image', content: 'https://ik.imagekit.io/b3amk7ihm/tr:w-300/senyawa_landing_page.png' },
     ],
   })
 
