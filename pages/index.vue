@@ -77,6 +77,8 @@
         <a v-for="item in config.public.newsData"
           :key="item.code"
           :href="`https://instagram.com/p/${item.code}`"
+          target="_blank"
+          rel="noreferrer noopener"
           class="group">
           <div
             class="card w-full h-[600px] bg-base-100 shadow-xl overflow-hidden">
