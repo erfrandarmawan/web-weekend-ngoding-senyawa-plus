@@ -75,7 +75,7 @@
       </div>
 
       <div id="wrapper-social-media" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-10 md:mt-20 xl:mt-20 gap-5 md:gap-8 xl:gap-10">
-        <a v-for="item in config.public.newsData"
+        <a v-for="item in newsData"
           :key="item.code"
           :href="`https://instagram.com/p/${item.code}`"
           target="_blank"
@@ -317,6 +317,7 @@
   // Prepare variable
   let ctx;
   const isMounted = ref(false);
+  const newsData = ref([]);
   
   // Get runtime config
   const config = useRuntimeConfig();
@@ -328,7 +329,14 @@
   onMounted(() => {
     // Set flag mounted
     isMounted.value = true;
-    
+
+    // Get env file
+    if (config.public.newsData && typeof config.public.newsData === 'string'){
+      newsData.value = JSON.parse(config.public.newsData);
+    } else {
+      newsData.value = config.public.newsData;
+    }
+
     // Animate page
     animatePage();
   });

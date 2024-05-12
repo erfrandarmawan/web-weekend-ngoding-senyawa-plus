@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      newsData: '',
+      newsData: process.env.NUXT_PUBLIC_NEWS_DATA || '',
     },
   },
 
