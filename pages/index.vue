@@ -61,6 +61,7 @@
           </div>
         </div>
       </div>
+      <span id="video-source" class="text-base text-white mt-5 font-poppins">Source : instagram.com/senyawa.plus</span>
     </section>
     <!-- ./Video Section -->
 
@@ -234,6 +235,10 @@
           duration: 1.5,
           opacity: 0,
           scale: 0
+        })
+        .from("#video-source", {
+          duration: 1,
+          opacity: 0,
         });
 
       gsap.timeline({
